@@ -18,5 +18,5 @@ b = int(b)
 print(a+b)
 print(a-b)
 print(a*b)
-print(a//b)
+print(a//b) /로 하면 2.3333333333333335 나옴 //해야 결과의 몫을 가져옴
 print(a%b)
