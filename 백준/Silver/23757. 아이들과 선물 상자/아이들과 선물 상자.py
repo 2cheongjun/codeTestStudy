@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 import heapq
 
 N, M = map(int, input().split())
@@ -26,6 +29,7 @@ for i in range(M):
     heapq.heappush(heap, -remain)
 
 print(1)
+
 
 
 *방법2
