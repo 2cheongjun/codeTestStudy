@@ -18,3 +18,35 @@ if ispre:
     print(0)
 else:
     print(1)
+    
+    
+    
+*****
+import heapq
+
+N, M = map(int, input().split())
+giftArray = list(map(int, input().split()))
+wishArray = list(map(int, input().split()))
+
+heap = []
+
+for i in range(N):
+    heapq.heappush(heap, - giftArray[i])
+
+for i in range(M):
+    wishCount = wishArray[i]
+
+    maxCount = -heapq.heappop(heap)
+
+    if wishCount > maxCount:
+        print(0)
+        exit(0)
+
+    if wishCount == maxCount:
+        continue
+
+    # wishCount < maxCount
+    remain = maxCount - wishCount
+    heapq.heappush(heap, -remain)
+
+print(1)
