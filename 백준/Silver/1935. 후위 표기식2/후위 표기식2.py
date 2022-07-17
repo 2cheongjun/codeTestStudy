@@ -6,19 +6,17 @@ for i in range(n):
 stack = []
 for i in word:
     if 'A' <= i <= 'Z':
-
         stack.append(numList[ord(i) - ord('A')])
     else:
-        str2 = stack.pop()
-        str1 = stack.pop()
+        n2 = stack.pop()
+        n1 = stack.pop()
 
         if i == '+':
-            stack.append(str1 + str2)
+            stack.append(n1 + n2)
         elif i == '-':
-            stack.append(str1 - str2)
+            stack.append(n1 - n2)
         elif i == '*':
-            stack.append(str1 * str2)
+            stack.append(n1 * n2)
         elif i == '/':
-            stack.append(str1 / str2)
-
+            stack.append(n1 / n2)
 print('%.2f' % stack[0])
