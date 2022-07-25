@@ -1,16 +1,18 @@
-import sys
+T = int(input())
 
-if __name__=='__main__':
-    T=int(input()) # 테스트 케이스 개수
+for _ in range(T):
+    N = int(input())
+    init = list(input().split())
 
-    for i in range(T):
-        N=int(input()) # 카드의 개수
-        arr=list(sys.stdin.readline().strip().split()) # 카드 입력
+    arr = []
+    arr.append(init[0])
 
-        answer=arr[0] # 처음 카드는 자신의 앞에 놓음
-        for i in range(1, len(arr)):
-            if ord(answer[0])>=ord(arr[i]): # 사전 순으로 앞이면
-                answer=arr[i]+answer
-            else: # 사전 순으로 뒤면
-                answer+=arr[i]
-        print(answer)
+    for i in range(1, len(init)):
+        if init[i] <= arr[0]:
+            arr.insert(0, init[i])
+        else:
+            arr.append(init[i])
+    print(''.join(arr))
+
+
+
