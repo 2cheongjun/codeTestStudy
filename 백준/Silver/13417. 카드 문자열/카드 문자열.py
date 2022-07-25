@@ -1,29 +1,3 @@
-*1번째 방법 
-T = int(input())
- 
-for _ in range(T):
-    N = int(input())
-    init = list(input().split())
- 
-    arr = []
-    arr.append(init[0])
- 
-    for i in range(1, len(init)):
-        if init[i] <= arr[0]:
-            arr.insert(0, init[i])
-        else:
-            arr.append(init[i])
- 
-    [ print(i, end='') for i in arr ]
-    print()
-
-
-
-
-
-
-
-*2번쨰 방법 아스키 코드 사용
 import sys
 
 if __name__=='__main__':
