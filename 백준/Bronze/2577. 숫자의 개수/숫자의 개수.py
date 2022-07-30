@@ -23,3 +23,23 @@ for i in str(result): #숫자를문자열로변환하고 문자열하나하나�
     
 for i in li:
     print(i)
+
+
+
+*
+A=int(input())
+B=int(input())
+C=int(input())
+
+D= str(A*B*C)
+
+numbers=[0,1,2,3,4,5,6,7,8,9]
+counter=[0]*10
+
+for i in D:
+    for j in numbers:
+        if int(i) == j:
+            counter[j]+=1
+
+for i in counter:
+    print(i)
