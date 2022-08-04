@@ -1,12 +1,5 @@
-import sys
-li=[i+1 for i in range(20)]
-
-for i in range(10):
-    m, n = map(int, sys.stdin.readline().split())
-    a=li[:m-1]
-    b=li[m-1:n][::-1]
-    c=li[n:]
-    li=a+b+c
-    
-for i in li:
-    print(i, end=' ')
+arr = [x for x in range(1,20+1)]
+for _ in range(10):
+    l, r = map (int, input().split())
+    arr[l-1:r] = arr[l-1:r][::-1]
+print(*arr)
