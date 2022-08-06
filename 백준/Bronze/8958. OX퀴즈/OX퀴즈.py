@@ -1,13 +1,13 @@
-n = int(input())
-
-for _ in range(n):
-    ox_list = list(input())
-    score = 0
-    score_sum = 0
-    for ox in ox_list:
-        if ox == "O":
-            score += 1
-            score_sum += score
+a = int(input())
+for i in range(a):
+    b = input()
+    s = list(b)
+    sum = 0
+    c = 1
+    for i in s:
+        if i == 'O':
+            sum += c
+            c += 1
         else:
-            score = 0
-    print(score_sum)
+            c = 1
+    print(sum)
